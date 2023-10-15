@@ -1,0 +1,16 @@
+<template>
+   <lightning-card>
+    <div class="slds-var-m-around_small">
+    <lightning-carousel>
+        <template for:each={players} for:item="player">
+            
+            <lightning-carousel-image key={player.Id}
+        src={player.ImageUrl}
+        header={player.Name}
+        data-interval="1000"
+        description={player.Description}> </lightning-carousel-image>
+        </template>
+    </lightning-carousel>
+</div>
+</lightning-card>
+</template>

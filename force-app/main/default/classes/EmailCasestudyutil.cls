@@ -1,0 +1,25 @@
+public class EmailCasestudyutil {
+    
+    Public static void sendingEmail( List<Lead> updation,List<Task> newtask)
+    {
+        Messaging.SingleEmailMessage message=new Messaging.SingleEmailMessage();
+        message.toaddresses=new String[]{userinfo.getUserEmail()};
+        message.subject='Test Message';
+        message.plaintextbody='The following Records are created today with NOT CONTACTED as status' + Updation
+            
+                                        + newtask;
+        
+        Messaging.SingleEmailMessage[] messages=new list<Messaging.SingleEmailMessage> {message};
+        Messaging.SendEmailResult[] results=messaging.sendEmail(messages);
+        if(results[0].success){
+            system.debug('The email was sent successfully');
+        }
+        else
+        {
+            system.debug('The email Failed to send ::' +results[0].errors[0].message);
+        }
+        
+        
+    } 
+    
+}

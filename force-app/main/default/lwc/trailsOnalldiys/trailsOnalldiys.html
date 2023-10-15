@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Student search">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Enter Name" onchange={handleChange}></lightning-input>
+            <lightning-button label="Search" variant="brand" onclick={handleClick}></lightning-button>
+            <template if:true={newstd1}>
+                <template for:each={newstd1} for:item="items">
+                  <div key={items.name} > {items.name}</div> 
+                </template>
+            </template>
+            
+        </div>
+    </lightning-card>
+</template>

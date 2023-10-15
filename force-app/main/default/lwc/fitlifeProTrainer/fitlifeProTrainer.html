@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Trainer">
+   <lightning-layout  multiple-rows vertical-align="center" >
+               <template for:each={trainerlst} for:item="record">
+                            <lightning-layout-item key={record.Id} size="12" padding="around-large" small-device-size="12" medium-device-size="6" large-device-size="4" >
+                        <lightning-formatted-rich-text value={record.Photo__c} height="100px" width="100px"></lightning-formatted-rich-text>
+                        <p> {record.Name}  {record.Last_Name__c}</p>
+                        <p>{record.Email__c}</p>
+                        <p>{record.Phone_Number__c}</p>
+                    </lightning-layout-item>
+                </template>
+    </lightning-layout>
+    </lightning-card> 
+</template>

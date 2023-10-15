@@ -1,0 +1,30 @@
+<template>
+
+    <lightning-card title="TODO LIST">
+        <lightning-layout slot="footer" pull-to-boundary="medium">
+            <lightning-layout-item size="10">
+                <lightning-input placeholder="Enter Task" onchange={handleInputChange} style="margin-left:10px"
+                    value={newTodo}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" style="padding-top: 19px;" flexibility="auto">
+                <lightning-button label="Add" onclick={handleClick}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+       
+            <template for:each={todos} for:item="t">
+                <lightning-layout  key={t.Id} >
+                
+                    <lightning-layout-item size="10">
+                        <lightning-input placeholder="Enter Task" onchange={handleInputChange} disabled="true" style="margin-left:10px"
+                            value={t.task}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="2" style="padding-top: 19px; margin-left: -85px" flexibility="auto">
+                        <lightning-button-icon icon-name="utility:error" name={t.id} class="slds-float_right"
+                            onclick={handleDeleteClick}>
+                        </lightning-button-icon>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+        
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Calculator">
+        <div class={customStyle}></div>
+        <lightning-input name="inp1" label="Input1" type="number" onchange={handleChange}></lightning-input>
+        <lightning-input name="inp2" label="Input2" type="number" onchange={handleChange}></lightning-input>
+        <lightning-button-group>  <lightning-button name="btn1" label="Add" onclick={handleClick}></lightning-button>
+        <lightning-button name="btn2" label="Sub" onclick={handleClick}></lightning-button>
+        <lightning-button name="btn3" label="Mul" onclick={handleClick}></lightning-button>
+        <lightning-button name="btn4" label="Div" onclick={handleClick}></lightning-button> </lightning-button-group>
+        <br/> 
+        Answer:{result}
+    </lightning-card>
+
+
+</template>

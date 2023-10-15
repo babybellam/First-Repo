@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Day 20">
+        <div class="slds-var-m-around_medium">
+            <p> Name :{accountInfo.fields.Name.value}</p> 
+        <template if:true={accountinfo}>
+           
+            <p>Industry:{accountInfo.fields.Industry.value} </p>
+            <p>Annual Revenue :{accountInfo.fields.AnnualRevenue.value}</p>
+  
+           
+        </template>
+
+    </div>
+        </lightning-card>
+    
+    
+</template>
